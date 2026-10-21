@@ -6,13 +6,19 @@ import { MusicaComponent } from './components/musica-component/musica-component'
 import { CineComponent } from './components/cine-component/cine-component';
 import { NotFoundComponent } from './components/not-found-component/not-found-component';
 import { appRoutingProvider, routing } from './app.routing';
+import { MenuComponent } from './components/menu-component/menu-component';
 
 @NgModule({
-  declarations: [App, HomeComponent, MusicaComponent, CineComponent, NotFoundComponent],
+  declarations: [
+    App,
+    HomeComponent,
+    MusicaComponent,
+    CineComponent,
+    NotFoundComponent,
+    MenuComponent,
+  ],
   imports: [BrowserModule, routing],
   providers: [provideBrowserGlobalErrorListeners(), appRoutingProvider],
   bootstrap: [App],
 })
-export class AppModule {
-
-}
+export class AppModule {}
