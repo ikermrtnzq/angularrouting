@@ -7,6 +7,7 @@ import { CineComponent } from './components/cine-component/cine-component';
 import { NotFoundComponent } from './components/not-found-component/not-found-component';
 import { appRoutingProvider, routing } from './app.routing';
 import { MenuComponent } from './components/menu-component/menu-component';
+import { NumeroDobleComponent } from './components/numero-doble-component/numero-doble-component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { MenuComponent } from './components/menu-component/menu-component';
     CineComponent,
     NotFoundComponent,
     MenuComponent,
+    NumeroDobleComponent,
   ],
   imports: [BrowserModule, routing],
   providers: [provideBrowserGlobalErrorListeners(), appRoutingProvider],
