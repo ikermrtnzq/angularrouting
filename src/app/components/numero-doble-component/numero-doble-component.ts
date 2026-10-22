@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+
 @Component({
   selector: 'app-numero-doble-component',
   standalone: false,
@@ -12,7 +13,8 @@ export class NumeroDobleComponent implements OnInit{
   //Recibimos el objeto inyectado con rutas
   constructor(
     private _activeRoute: ActivatedRoute,
-    private _router : Router
+    private _router : Router,
+    private _cdr: ChangeDetectorRef
   ){
     this.doble = 0;
   }
@@ -27,6 +29,7 @@ export class NumeroDobleComponent implements OnInit{
       if (parametros['numero'] != null) {
         this.numero= parseInt(parametros['numero']);
         this.doble = this.numero*2;
+        this._cdr.detectChanges();
       }
     })
   }

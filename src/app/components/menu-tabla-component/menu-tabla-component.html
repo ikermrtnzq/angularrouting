@@ -1,0 +1,7 @@
+<h1>Menú Tabla </h1>
+<ul>
+    @for (num of numeros; track num) {
+        <li><a [routerLink]="['/tabla', num]">{{num}}</a></li>
+    }
+</ul>
+
